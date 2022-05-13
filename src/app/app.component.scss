@@ -1,0 +1,11 @@
+.search {
+  &__container {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+  }
+}
