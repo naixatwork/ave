@@ -1,5 +1,5 @@
 <mat-sidenav-container class="h-full">
-    <mat-sidenav class="w-52" mode="over" opened>
+    <mat-sidenav class="w-52" mode="over" [(opened)]="shouldMenuOpen">
         <mat-selection-list [multiple]="false">
             <mat-list-option class="uppercase">Register</mat-list-option>
             <mat-list-option class="uppercase">Sign in</mat-list-option>
@@ -13,7 +13,7 @@
     <mat-sidenav-content>
         <header class="w-full bg-zinc-700">
             <div class="mx-5 xl:mx-96 flex gap-5 content-center items-center">
-                <button mat-icon-button class="lg:hidden text-white">
+                <button (click)="toggleMenu()" mat-icon-button class="lg:hidden text-white">
                     <mat-icon>menu</mat-icon>
                 </button>
                 <div class="flex justify-center items-center">

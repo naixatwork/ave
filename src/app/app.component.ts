@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ave';
+  public shouldMenuOpen = false;
+  public toggleMenu(): void{
+    this.shouldMenuOpen = !this.shouldMenuOpen;
+  }
 }

@@ -1,0 +1,13 @@
+.product-card {
+  @apply bg-gray-300 relative;
+
+  &__price-container {
+    @apply flex gap-2 left-[15px] top-[15px] text-zinc-500 absolute text-xl;
+  }
+
+  &__price {
+    &--old {
+      text-decoration: line-through;
+    }
+  }
+}
