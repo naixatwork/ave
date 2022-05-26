@@ -1,4 +1,5 @@
 .product-card {
+  min-height: 500px;
   @apply bg-gray-300 relative;
 
   &__price-container {

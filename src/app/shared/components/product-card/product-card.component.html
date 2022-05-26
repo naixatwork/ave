@@ -1,9 +1,27 @@
-<div class="w-full h-full relative product-card">
+<div (mouseenter)="toggleDescriptionShow()" (mouseleave)="toggleDescriptionShow()"
+     class="w-full h-full flex relative product-card ease-in-out transition hover:scale-105 hover:drop-shadow-2xl hover:filter-none z-40 hover:z-50 hover:border border-gray-50">
     <div class="product-card__price-container">
-        <p class="product-card__price product-card__price--old">&#163;50.99</p>
-        <p class="product-card__price">&#163;50.99</p>
+        <p *ngIf="oldPrice" class="product-card__price product-card__price--old">&#163; {{oldPrice}}</p>
+        <p class="product-card__price">&#163; {{price}}</p>
     </div>
-    <img class="w-full"
-         src="https://www.asket.com/imgproxy/e:1/format:jpeg/width:1080/resize:fit/quality:80/plain/https://asket.centracdn.net/client/dynamic/images/2_00d6bb1f5b-asket_tee_white_cart_thumb-original.jpg@jpg"
-         alt="">
+    <img class="w-full flex"
+         [src]="imageUrl"
+         [alt]="imageAlt">
+    <mat-divider></mat-divider>
+    <div *ngIf="shouldDescriptionShow"
+         class="w-full absolute bg-white top-full flex flex-col justify-center items-center gap-5 p-5 drop-shadow-2xl">
+        <p class="text-center font-bold text-zinc-700 uppercase text-lg">{{name}}</p>
+        <p class="text-center text-zinc-500">{{description}}</p>
+        <div class="flex gap-5">
+            <button mat-icon-button color="primary">
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button mat-icon-button color="primary">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button color="primary">
+                <mat-icon>close_fullscreen</mat-icon>
+            </button>
+        </div>
+    </div>
 </div>
