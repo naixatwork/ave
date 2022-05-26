@@ -1,0 +1,9 @@
+.footer {
+  &__heading {
+    @apply mb-5 font-bold text-zinc-700 uppercase;
+  }
+
+  &__subHeading {
+    @apply mb-5 text-zinc-700 uppercase;
+  }
+}

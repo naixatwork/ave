@@ -12,6 +12,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatListModule, MatSelectionList} from "@angular/material/list";
 import {MatSelectModule} from "@angular/material/select";
 import {MatMenuModule} from "@angular/material/menu";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MatMenuModule} from "@angular/material/menu";
         MatSelectModule,
         MatListModule,
         MatMenuModule,
+        SharedModule,
     ],
   providers: [MatSelectionList],
   bootstrap: [AppComponent]
