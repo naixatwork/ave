@@ -1,0 +1,12 @@
+.brand {
+  &__hero {
+    @apply relative flex flex-col justify-center items-center gap-10 p-10 lg:p-40 bg-center;
+    background-image: url("https://media.cntraveler.com/photos/5a8f3b070e2cf839e9dbfa1d/2:1/w_2560%2Cc_limit/NYC_GettyImages-640006562.jpg");
+    background-repeat: no-repeat;
+  }
+
+  &__about {
+    @apply mx-10 lg:mx-20 xl:mx-52 mt-10 mb-32 flex flex-col lg:grid grid-cols-2 gap-10;
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+  }
+}

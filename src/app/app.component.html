@@ -3,10 +3,12 @@
         <mat-selection-list [multiple]="false">
             <mat-list-option class="uppercase">Register</mat-list-option>
             <mat-list-option class="uppercase">Sign in</mat-list-option>
-            <mat-list-option class="uppercase">mens</mat-list-option>
-            <mat-list-option class="uppercase">womens</mat-list-option>
-            <mat-list-option class="uppercase">the brand</mat-list-option>
-            <mat-list-option class="uppercase">local stores</mat-list-option>
+            <mat-list-option class="uppercase">men's</mat-list-option>
+            <mat-list-option class="uppercase">women's</mat-list-option>
+            <mat-list-option class="uppercase"><a routerLink="./brand" routerLinkActive="text-teal-500">the brand</a>
+            </mat-list-option>
+            <mat-list-option class="uppercase"><a routerLink="./local-stores" routerLinkActive="text-teal-500">local
+                stores</a></mat-list-option>
             <mat-list-option class="uppercase">look book</mat-list-option>
         </mat-selection-list>
     </mat-sidenav>
@@ -40,8 +42,8 @@
                 <nav class="lg:flex hidden uppercase flex gap-12">
                     <a>mens</a>
                     <a>womens</a>
-                    <a>the brand</a>
-                    <a>local stores</a>
+                    <a routerLink="./brand" routerLinkActive="text-teal-500">the brand</a>
+                    <a routerLink="./local-stores" routerLinkActive="text-teal-500">local stores</a>
                     <a>look book</a>
                 </nav>
                 <div class="search__container">
