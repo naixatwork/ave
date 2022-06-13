@@ -1,4 +1,4 @@
-<div (mouseenter)="toggleDescriptionShow()" (mouseleave)="toggleDescriptionShow()"
+<div (click)="goToProductPage()" (mouseenter)="toggleDescriptionShow()" (mouseleave)="toggleDescriptionShow()"
      class="w-full h-full flex relative product-card ease-in-out transition hover:scale-105 hover:drop-shadow-2xl hover:filter-none z-40 hover:z-50 hover:border border-gray-50">
     <div class="product-card__price-container">
         <p *ngIf="oldPrice" class="product-card__price product-card__price--old">&#163; {{oldPrice}}</p>

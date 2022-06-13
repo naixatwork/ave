@@ -5,6 +5,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatDividerModule} from "@angular/material/divider";
 import { FooterComponent } from './components/footer/footer.component';
+import {RouterModule} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
+import {StarRatingConfigService, StarRatingModule} from "angular-star-rating";
 
 
 
@@ -21,7 +24,11 @@ import { FooterComponent } from './components/footer/footer.component';
         CommonModule,
         MatButtonModule,
         MatIconModule,
-        MatDividerModule
+        MatDividerModule,
+        RouterModule,
+        HttpClientModule,
+    ],
+    providers: [
     ]
 })
 export class SharedModule { }

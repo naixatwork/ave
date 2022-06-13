@@ -5,8 +5,8 @@ import {LookBookComponent} from "./look-book.component";
 const routes: Routes = [
   {
     path: '',
-    component: LookBookComponent
-  }
+    component: LookBookComponent,
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-card',
@@ -14,13 +15,17 @@ export class ProductCardComponent implements OnInit {
   @Input() description: string = 'ITEM_DESCRIPTION';
 
   public shouldDescriptionShow = false;
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
   }
 
   public toggleDescriptionShow(): void {
     this.shouldDescriptionShow = !this.shouldDescriptionShow;
+  }
+
+  public goToProductPage(): void {
+    this.router.navigate(['/product/', '1']);
   }
 
 }

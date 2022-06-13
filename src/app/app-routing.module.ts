@@ -19,6 +19,10 @@ const routes: Routes = [
         loadChildren: () => import('./look-book/look-book.module').then(m => m.LookBookModule)
     },
     {
+        path: 'product',
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
+    },
+    {
         path: '**',
         redirectTo: 'home'
     }

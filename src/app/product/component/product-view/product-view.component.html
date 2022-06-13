@@ -1,0 +1,105 @@
+<div class="mx-5 lg:mx-72">
+    <div class="flex flex-col lg:flex-row gap-10 mb-10">
+        <img class="w-full" [src]="product.imageUrl" alt="">
+        <div class="w-full flex flex-col gap-5 text-zinc-400">
+            <p class="text-3xl text-zinc-500 font-bold uppercase">{{product.name}}</p>
+            <div class="mb-5 flex flex-wrap gap-5">
+                <star-rating [starType]="'svg'" [rating]="product.rate"></star-rating>
+                <p>{{product.howManyReviews}} Review(s)</p>
+                <span class="border border-zinc-400"></span>
+                <p class="hover:cursor-pointer hover:text-teal-500">Add a review</p>
+                <span class="border border-zinc-400"></span>
+                <div class="flex justify-center items-center gap-3">
+                    <p>Share:</p>
+                    <mat-icon class="hover:cursor-pointer hover:text-teal-500">face</mat-icon>
+                    <mat-icon class="hover:cursor-pointer hover:text-teal-500">face</mat-icon>
+                    <mat-icon class="hover:cursor-pointer hover:text-teal-500">face</mat-icon>
+                    <mat-icon class="hover:cursor-pointer hover:text-teal-500">face</mat-icon>
+                    <mat-icon class="hover:cursor-pointer hover:text-teal-500">face</mat-icon>
+                </div>
+            </div>
+            <div class="mb-10 text-4xl flex gap-5">
+                <p class="line-through">&pound;{{product.oldPrice}}</p>
+                <p>&pound;{{product.price}}</p>
+            </div>
+            <div class="mb-10">
+                <p class="font-bold text-zinc-800 uppercase">availability: <span
+                        class="ml-3 font-medium text-zinc-500 capitalize">{{product.availability}}</span></p>
+                <p class="font-bold text-zinc-800 uppercase">product code: <span
+                        class="ml-3 font-medium text-zinc-500 capitalize">{{product.code}}</span></p>
+                <p class="font-bold text-zinc-800 uppercase">tags: <span
+                        class="ml-3 font-medium text-teal-500 inline-flex gap-2 capitalize">
+                    <span *ngFor="let tag of product.tags">
+                        {{tag}},
+                    </span>
+                </span></p>
+            </div>
+            <div class="mb-3">
+                <p>{{product.description}}</p>
+            </div>
+            <ul class="list-disc ml-5 capitalize">
+                <li *ngFor="let feature of product.features">{{feature}}</li>
+            </ul>
+            <div class=" flex flex-wrap gap-7">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label class="uppercase font-bold accent-zinc-700">colour</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let color of product.colors" [value]="color.name">
+                                <div class="flex items-center gap-3">
+                                    <span class="rounded-3xl p-3" [ngStyle]="{'background': color.color}"></span>
+                                    <p>{{color.name}}</p>
+                                </div>
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label class="uppercase font-bold accent-zinc-700">size</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let size of product.sizes" [value]="size">
+                                <div class="flex items-center gap-3">
+                                    <p>{{size}}</p>
+                                </div>
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="w-10">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="uppercase font-bold accent-zinc-700">QTY</mat-label>
+                        <input matInput type="number">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="flex gap-5">
+                <button class="hover:bg-black hover:text-white p-5 w-2/5 flex gap-3 justify-center items-center border border-black text-black uppercase">
+                    <mat-icon>shopping_cart</mat-icon>
+                    add to cart
+                </button>
+                <button class="hover:bg-black hover:text-white p-5 w-3/5 flex gap-3 justify-center items-center border border-black text-black uppercase">
+                    <mat-icon>favorite</mat-icon>
+                    add to lookbook
+                </button>
+            </div>
+            <div class="flex flex-wrap gap-5 items-center">
+                <button mat-mini-fab class="bg-zinc-500"><mat-icon>compare_arrows</mat-icon></button>
+                <p class="uppercase text-zinc-500 text-lg">add to compare</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="flex flex-wrap bg-zinc-100 text-zinc-800 capitalize text-2xl">
+            <p class="px-7 py-5 bg-black text-white">description</p>
+            <p class="px-7 py-5">video</p>
+            <p class="px-7 py-5">sizes & specs</p>
+            <p class="px-7 py-5">delivery & returns</p>
+            <p class="px-7 py-5">reviews</p>
+        </div>
+        <div class="p-5 text-zinc-400">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dignissimos dolor reiciendis sint voluptate? Accusantium, alias architecto assumenda, beatae blanditiis debitis delectus ducimus ipsa mollitia numquam obcaecati praesentium suscipit tempora! Aliquid cumque eius excepturi fugit perferendis tenetur veniam? Ab aperiam atque blanditiis, commodi delectus dolorem ducimus ea eos et expedita incidunt itaque laborum modi nam nisi omnis pariatur quae reprehenderit repudiandae saepe suscipit voluptatibus voluptatum? Ab aliquid aspernatur blanditiis culpa cupiditate delectus, doloribus eaque excepturi expedita facere fugiat in, incidunt magni natus nesciunt, non praesentium quam quidem quo recusandae sed sit tenetur veritatis. Aliquid blanditiis doloremque eum ex quae quibusdam ut! Iusto laboriosam laborum magni maxime neque nesciunt omnis possimus quidem totam, vel. Accusantium alias aliquid at atque autem beatae commodi consectetur cumque distinctio ducimus ea enim est excepturi in ipsa iure mollitia neque nihil numquam obcaecati odit pariatur porro praesentium quaerat quam qui ratione repellat, saepe sequi tenetur vero vitae, voluptas voluptate! Facilis, labore vitae! Aperiam autem deleniti, deserunt dolorum esse ex excepturi hic minus, nemo nihil nulla officia perspiciatis qui sequi tempore. A aliquid fuga laboriosam praesentium recusandae sit, sunt voluptatum. A asperiores blanditiis consequatur delectus deserunt ducimus illo, labore necessitatibus nobis numquam reprehenderit sed, tempore vel. At, blanditiis, cupiditate dignissimos dolorem dolores eum harum iste nihil odit quas recusandae repellat repudiandae, sapiente sequi tenetur ullam ut. Cumque exercitationem id recusandae rem. Aspernatur consequatur dolorem dolores eos esse est expedita facere incidunt, nemo nesciunt nobis possimus rem soluta temporibus vitae voluptate voluptatem? Accusamus aperiam culpa, delectus dignissimos dolore dolorem eum ex fuga maiores minima nam numquam optio pariatur quam quisquam temporibus vel? Doloremque esse illo magnam nam neque optio placeat porro quam quidem recusandae, repellat rerum, sequi sint! Dolor dolorum exercitationem ipsa labore laudantium nemo placeat quis sunt velit voluptatem. Alias esse eveniet itaque mollitia nesciunt tenetur veritatis?</p>
+        </div>
+    </div>
+</div>
+

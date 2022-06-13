@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "code": "#4392123",
+    "imageUrl": "https://imageseu.lee.com/is/image/EULee/L53LRYSV_1?$KDP-MEDIUM$",
+    "name": "ave classic sweatshirt",
+    "rate": 4,
+    "howManyReviews": 3,
+    "price": 99.5,
+    "oldPrice": 101.5,
+    "availability": "In stock",
+    "tags": ["classic", "causal", "v-neck", "loose"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at, autem culpa, dolorem doloremque error excepturi iste laborum magni maxime molestiae provident quasi quia repellat, sed sunt tempore tenetur? Adipisci alias aut culpa dolore eaque earum eius, est magni mollitia nisi quis reprehenderit sit sunt temporibus tenetur ut veniam, voluptate.",
+    "features": ["elasticated cuffs", "casual fit", "100% cotton", "free shipping with 4 days delivery"],
+    "colors": [
+      {
+        "name": "red",
+        "color": "#ff10aa"
+      },
+      {
+        "name": "green",
+        "color": "#10ff43"
+      },
+      {
+        "name": "blue",
+        "color": "#1468ff"
+      }
+    ],
+    "sizes": ["small", "medium", "large"]
+  },
+  {
+    "id": "2",
+    "code": "#4392341",
+    "imageUrl": "https://uk.naploungewear.com/wp-content/uploads/2021/11/Boxy-Turtleneck-Sweatshirt-Ivory-2-510x695.jpg",
+    "name": "something else",
+    "rate": 2,
+    "howManyReviews": 10,
+    "price": 99.5,
+    "oldPrice": 101.5,
+    "availability": "In stock",
+    "tags": ["classic", "causal", "v-neck", "loose"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at, autem culpa, dolorem doloremque error excepturi iste laborum magni maxime molestiae provident quasi quia repellat, sed sunt tempore tenetur? Adipisci alias aut culpa dolore eaque earum eius, est magni mollitia nisi quis reprehenderit sit sunt temporibus tenetur ut veniam, voluptate.",
+    "features": ["elasticated cuffs", "casual fit", "100% cotton", "free shipping with 4 days delivery"],
+    "colors": [
+      {
+        "name": "red",
+        "color": "#ff10aa"
+      },
+      {
+        "name": "green",
+        "color": "#10ff43"
+      }
+    ],
+    "sizes": ["medium", "large"]
+  }
+]

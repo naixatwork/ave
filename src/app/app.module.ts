@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -13,11 +13,12 @@ import {MatListModule, MatSelectionList} from "@angular/material/list";
 import {MatSelectModule} from "@angular/material/select";
 import {MatMenuModule} from "@angular/material/menu";
 import {SharedModule} from "./shared/shared.module";
+import {StarRatingConfigService, StarRatingModule} from "angular-star-rating";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+    declarations: [
+        AppComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -31,8 +32,10 @@ import {SharedModule} from "./shared/shared.module";
         MatListModule,
         MatMenuModule,
         SharedModule,
+        StarRatingModule.forRoot()
     ],
-  providers: [MatSelectionList],
-  bootstrap: [AppComponent]
+    providers: [MatSelectionList, StarRatingConfigService],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
