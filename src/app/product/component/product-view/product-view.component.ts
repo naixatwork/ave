@@ -25,7 +25,6 @@ export class ProductViewComponent implements OnInit {
                 flatMap((params) => this.productService.getProductById(params['product-id']))
             ).subscribe((product) => {
             if (product) {
-                console.log(product)
                 this.setProduct(product)
             }
         })

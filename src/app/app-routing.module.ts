@@ -23,6 +23,10 @@ const routes: Routes = [
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
     },
     {
+        path: 'signup',
+        loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule)
+    },
+    {
         path: '**',
         redirectTo: 'home'
     }

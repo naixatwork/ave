@@ -1,8 +1,8 @@
 <mat-sidenav-container class="h-full">
     <mat-sidenav class="w-52" mode="over" [(opened)]="shouldMenuOpen">
         <mat-selection-list [multiple]="false">
-            <mat-list-option class="uppercase">Register</mat-list-option>
-            <mat-list-option class="uppercase">Sign in</mat-list-option>
+            <mat-list-option class="uppercase"><a routerLink="./signup" routerLinkActive="text-teal-500">Register</a></mat-list-option>
+            <mat-list-option class="uppercase"><a routerLink="./signup" routerLinkActive="text-teal-500">Sign in</a></mat-list-option>
             <mat-list-option class="uppercase">men's</mat-list-option>
             <mat-list-option class="uppercase">women's</mat-list-option>
             <mat-list-option class="uppercase"><a routerLink="./brand" routerLinkActive="text-teal-500">the brand</a>
@@ -31,8 +31,8 @@
                     </p>
                 </div>
                 <div class="flex ml-auto gap-3">
-                    <p class="hidden sm:flex justify-center items-center text-white">Register</p>
-                    <p class="hidden sm:flex justify-center items-center text-white">Sign in</p>
+                    <p class="hidden sm:flex justify-center items-center text-white"><a routerLink="./signup" routerLinkActive="text-teal-500">Register</a></p>
+                    <p class="hidden sm:flex justify-center items-center text-white"><a routerLink="./signup" routerLinkActive="text-teal-500">Sign in</a></p>
                     <div class="flex justify-center items-center text-white bg-teal-500 gap-5 py-4 px-8 ml-10">
                         <mat-icon>shopping_cart</mat-icon>
                         <p class="hidden md:flex justify-center items-center">Empty
